@@ -22,7 +22,7 @@ export default function ReceptionSection() {
           <p className="font-inter text-[10px] uppercase tracking-[0.4em] text-[#B8913A] mb-2 opacity-80">
             Following the Ceremony
           </p>
-          <h2 className="font-cormorant italic text-3xl font-medium text-[#2C2C2C] drop-shadow-sm">
+          <h2 className="font-cormorant italic text-3xl font-medium text-[var(--text-dark)] drop-shadow-sm">
             Reception
           </h2>
           <div className="flex items-center gap-3 justify-center mt-3">
@@ -75,10 +75,10 @@ export default function ReceptionSection() {
               transition={{ delay: 0.25, duration: 0.6 }}
               className="text-center mb-5"
             >
-              <h3 className="font-cormorant font-semibold text-xl text-[#2C2C2C] mb-1">
+              <h3 className="font-cormorant font-semibold text-xl text-[var(--text-dark)] mb-1">
                 {weddingData.reception.name}
               </h3>
-              <p className="font-inter text-sm text-[#7A7060] leading-relaxed">
+              <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed">
                 {weddingData.reception.addressEn[0]}<br />
                 {weddingData.reception.addressEn[1]}
               </p>
@@ -106,7 +106,7 @@ export default function ReceptionSection() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-center mt-5 font-cormorant italic text-sm text-[#7A7060] opacity-80"
+          className="text-center mt-5 font-cormorant italic text-sm text-[var(--text-muted)] opacity-80"
         >
           All guests are warmly invited to the reception
         </Motion.p>
@@ -115,3 +115,4 @@ export default function ReceptionSection() {
     </section>
   );
 }
+

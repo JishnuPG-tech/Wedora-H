@@ -91,7 +91,7 @@ END:VCALENDAR`;
           className="text-center mb-6"
         >
           <p className="font-inter text-[10px] uppercase tracking-[0.35em] text-[#6B8E6B] mb-2">Location</p>
-          <h2 className="font-cormorant text-3xl font-semibold text-[#2C2C2C]">Venue</h2>
+          <h2 className="font-cormorant text-3xl font-semibold text-[var(--text-dark)]">Venue</h2>
         </motion.div>
 
         {/* Venue card */}
@@ -121,8 +121,8 @@ END:VCALENDAR`;
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-center mb-5"
             >
-              <h3 className="font-cormorant font-semibold text-xl text-[#2C2C2C] mb-1">{weddingData.venue.name}</h3>
-              <p className="font-inter text-sm text-[#7A7060]">
+              <h3 className="font-cormorant font-semibold text-xl text-[var(--text-dark)] mb-1">{weddingData.venue.name}</h3>
+              <p className="font-inter text-sm text-[var(--text-muted)]">
                 {weddingData.venue.addressEn[0]}<br />
                 {weddingData.venue.addressEn[1]}
               </p>
@@ -201,3 +201,4 @@ END:VCALENDAR`;
     </section>
   );
 }
+

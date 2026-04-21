@@ -81,7 +81,7 @@ export default function HeroCover({ guestName }) {
                    className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.9)] to-transparent -skew-x-12 z-0"
                 />
                 
-                <p className="relative z-10 font-inter text-[9px] uppercase tracking-[0.25em] text-[#7A7060] leading-relaxed">
+                <p className="relative z-10 font-inter text-[9px] uppercase tracking-[0.25em] text-[var(--text-muted)] leading-relaxed">
                   Exclusive Invitation For
                   <span className="font-semibold text-[#B8913A] tracking-[0.2em] text-[11px] mt-0.5 block drop-shadow-sm">{guestName}</span>
                 </p>
@@ -90,7 +90,7 @@ export default function HeroCover({ guestName }) {
           ) : (
             <Motion.div variants={itemVariants} className="flex justify-center mb-5">
               <div className="inline-block border border-[rgba(107,142,107,0.3)] shadow-sm rounded-full px-5 py-1.5 bg-[rgba(107,142,107,0.03)] backdrop-blur-sm">
-                <p className="font-inter text-[10px] uppercase tracking-[0.3em] text-[#7A7060]">
+                <p className="font-inter text-[10px] uppercase tracking-[0.3em] text-[var(--text-muted)]">
                   Wedding Invitation
                 </p>
               </div>
@@ -100,7 +100,7 @@ export default function HeroCover({ guestName }) {
           {/* Invite line with Malayalam Cultural Header */}
           <Motion.div variants={itemVariants} className="mb-5">
             <p className="font-malayalam text-xl text-[#B8913A] opacity-80 mb-2 font-medium">{weddingData.strings.invitePrimaryMl}</p>
-            <p className="font-cormorant text-[15px] italic text-[#7A7060] leading-relaxed max-w-[240px] mx-auto">
+            <p className="font-cormorant text-[15px] italic text-[var(--text-muted)] leading-relaxed max-w-[240px] mx-auto">
               {weddingData.strings.inviteSecondaryEn}
             </p>
           </Motion.div>
@@ -124,7 +124,7 @@ export default function HeroCover({ guestName }) {
             <div className="ornamental-divider text-[#B8913A] text-xs mb-4">
               <span>✦</span>
             </div>
-            <p className="font-inter text-[12px] uppercase tracking-[0.25em] text-[#7A7060]">
+            <p className="font-inter text-[12px] uppercase tracking-[0.25em] text-[var(--text-muted)]">
               {weddingData.dates.headerDisplay}
             </p>
           </Motion.div>
@@ -137,7 +137,7 @@ export default function HeroCover({ guestName }) {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mt-10 flex flex-col items-center gap-2"
         >
-          <p className="font-inter text-[11px] uppercase tracking-[0.25em] text-[#7A7060]">Swipe up to open</p>
+          <p className="font-inter text-[11px] uppercase tracking-[0.25em] text-[var(--text-muted)]">Swipe up to open</p>
           <div className="scroll-indicator text-[#6B8E6B]">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M12 5v14M5 12l7 7 7-7"/>
@@ -148,3 +148,4 @@ export default function HeroCover({ guestName }) {
     </section>
   );
 }
+

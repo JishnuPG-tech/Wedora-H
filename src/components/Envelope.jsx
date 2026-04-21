@@ -43,7 +43,7 @@ export default function Envelope({ onOpen }) {
         >
             <Motion.div animate={{ opacity: isOpen ? 0 : 1 }} transition={{ delay: 0.8, duration: 0.4 }}>
               <p className="font-malayalam text-xs text-[#B8913A] mb-2 font-medium text-center">{weddingData.strings.envelopeSmallTitle}</p>
-              <p className="font-cormorant italic text-3xl text-[#2C2C2C] text-center">{weddingData.couple.groom} <span className="text-[#B8913A] text-xl">{weddingData.couple.ampersand}</span> {weddingData.couple.bride}</p>
+              <p className="font-cormorant italic text-3xl text-[var(--text-dark)] text-center">{weddingData.couple.groom} <span className="text-[#B8913A] text-xl">{weddingData.couple.ampersand}</span> {weddingData.couple.bride}</p>
             </Motion.div>
         </Motion.div>
 
@@ -126,3 +126,4 @@ export default function Envelope({ onOpen }) {
     </Motion.div>
   );
 }
+

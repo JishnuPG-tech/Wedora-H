@@ -38,7 +38,7 @@ export default function App() {
   if (window.location.pathname === '/admin') return <AdminDashboard />;
 
   return (
-    <div className="relative w-full bg-[#F8F7F4]">
+    <div className="relative w-full">
       {loaderDone && <ScrollProgress />}
       {loaderDone && <DarkModeToggle dark={dark} setDark={setDark} />}
       {!loaderDone && <Envelope onOpen={() => setLoaderDone(true)} />}
@@ -62,3 +62,4 @@ export default function App() {
     </div>
   );
 }
+

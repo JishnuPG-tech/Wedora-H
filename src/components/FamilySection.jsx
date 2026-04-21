@@ -28,7 +28,7 @@ const FamilyCard = ({ side, delay }) => {
         </p>
 
         {/* Name */}
-        <p className="font-cormorant italic font-semibold text-xl text-[#2C2C2C] mb-3">
+        <p className="font-cormorant italic font-semibold text-xl text-[var(--text-dark)] mb-3">
           {data.name}
         </p>
 
@@ -40,20 +40,20 @@ const FamilyCard = ({ side, delay }) => {
         </div>
 
         {/* Relation line */}
-        <p className="font-inter text-[9.5px] uppercase tracking-[0.2em] text-[#7A7060] mb-2 opacity-70">
+        <p className="font-inter text-[9.5px] uppercase tracking-[0.2em] text-[var(--text-muted)] mb-2 opacity-70">
           {data.relation}
         </p>
 
         {/* Father */}
         <div className="flex items-center justify-center gap-2 mb-1">
           <span className="font-inter text-[10px] text-[#6B8E6B] opacity-60">S/o</span>
-          <p className="font-cormorant text-base text-[#2C2C2C] font-medium">{data.father}</p>
+          <p className="font-cormorant text-base text-[var(--text-dark)] font-medium">{data.father}</p>
         </div>
 
         {/* Mother */}
         <div className="flex items-center justify-center gap-2">
           <span className="font-inter text-[10px] text-[#6B8E6B] opacity-60">&</span>
-          <p className="font-cormorant text-base text-[#2C2C2C] font-medium">{data.mother}</p>
+          <p className="font-cormorant text-base text-[var(--text-dark)] font-medium">{data.mother}</p>
         </div>
       </div>
     </Motion.div>
@@ -79,10 +79,10 @@ export default function FamilySection() {
           <p className="font-inter text-[10px] uppercase tracking-[0.4em] text-[#B8913A] mb-3 opacity-80">
             With Blessings Of
           </p>
-          <h2 className="font-cormorant italic text-3xl font-medium text-[#2C2C2C] drop-shadow-sm">
+          <h2 className="font-cormorant italic text-3xl font-medium text-[var(--text-dark)] drop-shadow-sm">
             Our Families
           </h2>
-          <p className="font-cormorant italic text-sm text-[#7A7060] mt-2 opacity-80">
+          <p className="font-cormorant italic text-sm text-[var(--text-muted)] mt-2 opacity-80">
             United in love, blessed by both families
           </p>
         </Motion.div>
@@ -116,7 +116,7 @@ export default function FamilySection() {
           className="text-center mt-6"
         >
           <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#B8913A]/30 to-transparent mx-auto mb-3" />
-          <p className="font-cormorant italic text-[13px] text-[#7A7060] leading-relaxed opacity-80">
+          <p className="font-cormorant italic text-[13px] text-[var(--text-muted)] leading-relaxed opacity-80">
             Together with our parents' blessings,<br />
             we begin our journey as one
           </p>
@@ -126,3 +126,4 @@ export default function FamilySection() {
     </section>
   );
 }
+

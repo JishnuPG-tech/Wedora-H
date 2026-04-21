@@ -28,7 +28,7 @@ const DetailRow = ({ label, value, delay = 0 }) => {
       className="text-center py-4"
     >
       <div className="font-inter text-[10px] uppercase tracking-[0.3em] text-[#B8913A] mb-1">{label}</div>
-      <p className="font-cormorant text-2xl font-medium text-[#2C2C2C] leading-tight">{value}</p>
+      <p className="font-cormorant text-2xl font-medium text-[var(--text-dark)] leading-tight">{value}</p>
     </Motion.div>
   );
 };
@@ -70,8 +70,8 @@ const MinimalCountdown = () => {
     <div className="flex justify-center gap-4 mt-6 mb-2">
       {Object.entries(time).map(([label, value]) => (
         <div key={label} className="text-center flex flex-col items-center">
-          <span className="font-cormorant text-2xl text-[#2C2C2C] leading-none mb-1">{String(value).padStart(2, '0')}</span>
-          <span className="font-inter text-[8px] uppercase tracking-[0.2em] text-[#7A7060]">{label}</span>
+          <span className="font-cormorant text-2xl text-[var(--text-dark)] leading-none mb-1">{String(value).padStart(2, '0')}</span>
+          <span className="font-inter text-[8px] uppercase tracking-[0.2em] text-[var(--text-muted)]">{label}</span>
         </div>
       ))}
     </div>
@@ -94,7 +94,7 @@ export default function InsideDetails() {
           className="text-center mb-6"
         >
           <p className="font-inter text-[10px] uppercase tracking-[0.35em] text-[#6B8E6B] mb-2">The Details</p>
-          <h2 className="font-cormorant text-3xl font-semibold text-[#2C2C2C]">Ceremony &amp; Reception</h2>
+          <h2 className="font-cormorant text-3xl font-semibold text-[var(--text-dark)]">Ceremony &amp; Reception</h2>
         </Motion.div>
 
         {/* Card */}
@@ -112,16 +112,16 @@ export default function InsideDetails() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex flex-col items-center border border-[rgba(107,142,107,0.2)] rounded-2xl p-5 mb-6 bg-[#FAF8F2]/60"
           >
-            <div className="flex items-center justify-center gap-6 text-[#2C2C2C]">
+            <div className="flex items-center justify-center gap-6 text-[var(--text-dark)]">
               <div className="text-right border-r border-[rgba(107,142,107,0.3)] pr-5">
-                <p className="font-inter text-[10px] uppercase tracking-widest text-[#7A7060]">{weddingData.dates.calendar.dayOfWeek}</p>
+                <p className="font-inter text-[10px] uppercase tracking-widest text-[var(--text-muted)]">{weddingData.dates.calendar.dayOfWeek}</p>
               </div>
               <div className="text-center -mt-2">
                 <span className="font-cormorant font-light text-6xl leading-none text-[#4A6A4A]">{weddingData.dates.calendar.dayNumber}</span>
               </div>
               <div className="text-left border-l border-[rgba(107,142,107,0.3)] pl-5">
                 <p className="font-cormorant font-semibold text-lg leading-tight">{weddingData.dates.calendar.month}</p>
-                <p className="font-inter text-[10px] tracking-widest text-[#7A7060]">{weddingData.dates.calendar.year}</p>
+                <p className="font-inter text-[10px] tracking-widest text-[var(--text-muted)]">{weddingData.dates.calendar.year}</p>
               </div>
             </div>
 
@@ -154,8 +154,8 @@ export default function InsideDetails() {
             className="text-center py-4"
           >
              <p className="font-inter text-[10px] uppercase tracking-[0.3em] text-[#B8913A] mb-1">Venue</p>
-             <p className="font-cormorant text-2xl font-medium text-[#2C2C2C] leading-tight mb-2">{weddingData.venue.name}</p>
-             <p className="font-inter text-[12px] text-[#7A7060] leading-relaxed">
+             <p className="font-cormorant text-2xl font-medium text-[var(--text-dark)] leading-tight mb-2">{weddingData.venue.name}</p>
+             <p className="font-inter text-[12px] text-[var(--text-muted)] leading-relaxed">
               {weddingData.venue.addressEn[0]}<br />{weddingData.venue.addressEn[1]}
             </p>
           </Motion.div>
@@ -170,7 +170,7 @@ export default function InsideDetails() {
             transition={{ delay: 0.55, duration: 0.6 }}
             className="text-center pt-3"
           >
-            <p className="font-inter text-[9px] uppercase tracking-[0.3em] text-[#7A7060] mb-2">Hosted by</p>
+            <p className="font-inter text-[9px] uppercase tracking-[0.3em] text-[var(--text-muted)] mb-2">Hosted by</p>
             <p className="font-cormorant italic text-[15px] text-[#4A6A4A] leading-relaxed">
               {weddingData.hosts[0]}
               <br />
@@ -188,3 +188,4 @@ export default function InsideDetails() {
     </section>
   );
 }
+
